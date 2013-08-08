@@ -58,8 +58,8 @@ Docs
 
 Use the official documentation, but replace the function names:
 
-Original: startOfLine, Pissix: rivinEga  
-Original: endOfLine, Pissix: rivinViga  
+Original: startOfLine, Pissix: laininStartti  
+Original: endOfLine, Pissix: laininEndi  
 Original: then, Pissix: sit  
 Original: find, Pissix: eti  
 Original: maybe, Pissix: kait  

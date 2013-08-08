@@ -80,7 +80,7 @@
         
         // Start and end of line functions
         // Original: startOfLine
-        laininEga: function( enable ) {
+        laininStartti: function( enable ) {
             enable = ( enable !== false );
             this._prefixes = enable ? "^" : "";
             this.add( "" );
@@ -88,7 +88,7 @@
         },
         
         // Original: endOfLine
-        laininViga : function( enable ) {
+        laininEndi : function( enable ) {
             enable = ( enable !== false );
             this._suffixes = enable ? "$" : "";
             this.add( "" );
