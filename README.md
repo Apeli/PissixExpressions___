@@ -13,13 +13,13 @@ Here's a couple of simple examples to give an idea of how PissixEx works:
 ```javascript
 // Create an example of how to test for correctly formed URLs
 var tester = PissixEx()
-            .laininEga()
+            .laininStartti()
             .sit( "http" )
             .kait( "s" )
             .sit( "://" )
             .kait( "www." )
             .mitäVaaPaizi( " " )
-            .laininViga();
+            .laininEndi();
 
 // Create an example URL
 var testMe = "https://www.lidl.fi";

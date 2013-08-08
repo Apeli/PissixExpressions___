@@ -11,13 +11,13 @@ test( "something", function() {
 } );
 
 test( "anything", function() {
-    var testRegex = PissixEx().rivinEga().ihaSama();
+    var testRegex = PissixEx().laininStartti().ihaSama();
     var testString = "what";
     ok( testRegex.test( testString ), "Passes!" );
 } );
 
 test( "anythingBut", function() {
-    var testRegex = PissixEx().rivinEga().ihaSamaPaizi( "w" );
+    var testRegex = PissixEx().laininStartti().ihaSamaPaizi( "w" );
     var testString = "what";
     ok( testRegex.test( testString ), "starts with w" );
 } );
@@ -38,8 +38,8 @@ test( "somethingBut", function() {
     ok( ! testRegex.test( testString ), "starts with a" );
 } );
 
-test( "rivinEga", function() {
-    var testRegex = PissixEx().rivinEga().sit( "a" );
+test( "laininStartti", function() {
+    var testRegex = PissixEx().laininStartti().sit( "a" );
     var testString;
 
     testString = "a";
@@ -63,7 +63,7 @@ test( "rivinViga", function() {
 } );
 
 test( "kait", function() {
-    var testRegex = PissixEx().rivinEga().sit( "a" ).kait( "b" );
+    var testRegex = PissixEx().laininStartti().sit( "a" ).kait( "b" );
     var testString;
 
     testString = "acb";
@@ -75,7 +75,7 @@ test( "kait", function() {
 } );
 
 test( "mikäVaa", function() {
-    var testRegex = PissixEx().rivinEga().sit( "a" ).mikäVaa( "xyz" );
+    var testRegex = PissixEx().laininStartti().sit( "a" ).mikäVaa( "xyz" );
     var testString;
 
     testString = "ay";
@@ -87,7 +87,7 @@ test( "mikäVaa", function() {
 } );
 
 test( "tai", function() {
-    var testRegex = PissixEx().rivinEga().sit( "abc" ).tai( "def" );
+    var testRegex = PissixEx().laininStartti().sit( "abc" ).tai( "def" );
     var testString;
 
     testString = "defzzz";
@@ -102,7 +102,7 @@ test( "uusRivi", function() {
     var testRegex;
     var testString;
 
-    testRegex = PissixEx().rivinEga().sit( "abc" ).uusRivi().sit( "def" );
+    testRegex = PissixEx().laininStartti().sit( "abc" ).uusRivi().sit( "def" );
     testString = "abc\r\ndef";
     ok( testRegex.test( testString ), "abc then line break then def" );
 
@@ -119,7 +119,7 @@ test( "br", function() {
     var testRegex;
     var testString;
 
-    testRegex = PissixEx().rivinEga().sit( "abc" ).uusRivi().sit( "def" );
+    testRegex = PissixEx().laininStartti().sit( "abc" ).uusRivi().sit( "def" );
     testString = "abc\r\ndef";
     ok( testRegex.test( testString ), "abc then line break then def" );
 
@@ -136,7 +136,7 @@ test( "täbi", function() {
     var testRegex;
     var testString;
 
-    testRegex = PissixEx().rivinEga().täbi().sit( "abc" );
+    testRegex = PissixEx().laininStartti().täbi().sit( "abc" );
     testString = "\tabc";
     ok( testRegex.test( testString ), "tab then abc" );
 
@@ -149,11 +149,11 @@ test( "ihaSamaMikäKoko", function() {
     var testRegex;
     var testString;
 
-    testRegex = PissixEx().rivinEga().sit( "a" );
+    testRegex = PissixEx().laininStartti().sit( "a" );
     testString = "A";
     ok( ! testRegex.test( testString ), "not case insensitive" );
 
-    testRegex = PissixEx().rivinEga().sit( "a" ).ihaSamaMikäKoko();
+    testRegex = PissixEx().laininStartti().sit( "a" ).ihaSamaMikäKoko();
     testString = "A";
     ok( testRegex.test( testString ), "case insensitive" );
 
@@ -166,11 +166,11 @@ test( "yhenRivinSöörtsi", function() {
     var testRegex;
     var testString;
 
-    testRegex = PissixEx().rivinEga().sit( "a" ).breikki().sit( "b" ).rivinViga();
+    testRegex = PissixEx().laininStartti().sit( "a" ).breikki().sit( "b" ).rivinViga();
     testString = "a\nb";
     ok( testRegex.test( testString ), "b is on the second line" );
 
-    testRegex = PissixEx().rivinEga().sit( "a" ).breikki().sit( "b" ).rivinViga().yhenRivinSöörtsi();
+    testRegex = PissixEx().laininStartti().sit( "a" ).breikki().sit( "b" ).rivinViga().yhenRivinSöörtsi();
     testString = "a\nb";
     ok( testRegex.test( testString ), "b is on the second line but we are only searching the first" );
 } );
