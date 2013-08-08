@@ -18,15 +18,15 @@ var tester = PissixEx()
             .kait( "s" )
             .sit( "://" )
             .kait( "www." )
-            .mitäVaaPaizi( " " )
+            .ihaSamaPaizi( " " )
             .laininEndi();
 
 // Create an example URL
 var testMe = "https://www.lidl.fi";
 
 // Use RegExp object's native test() function
-if( tester.test( testMe ) ) alert( "We have a correct URL "); // This output will fire
-else alert( "The URL is incorrect" );
+if( tester.test( testMe ) ) alert( "Jesssss siideriiii!"); // This output will fire
+else alert( "Vittu ei oo papereit" );
 
 console.log( tester ); // Ouputs the actual expression used: /^(http)(s)?(\:\/\/)(www\.)?([^\ ]*)$/ 
 ```
@@ -49,7 +49,7 @@ alert( result ); // Outputs "Onx sul heittää yhtää ESsii?"
 ### Shorthand for string replace:
 
 ```javascript
-var result = PissixEx().eti( "mutsi" ).replace( "Meiän mutsi skitsoo iha vitusti", "faija" );
+var result = PissixEx().eti( "mutsi" ).vaiha( "Meiän mutsi skitsoo iha vitusti", "faija" );
 alert( result ); // Outputs "Meiän faija skitsoo iha vitusti"
 ```
 
