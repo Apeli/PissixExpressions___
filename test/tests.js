@@ -50,8 +50,8 @@ test( "laininStartti", function() {
     ok( ! testRegex.test( testString ), "Doesn't start with a" );
 } );
 
-test( "rivinViga", function() {
-    var testRegex = PissixEx().eti( "a" ).rivinViga();
+test( "laininEndi", function() {
+    var testRegex = PissixEx().eti( "a" ).laininEndi();
     var testString;
 
     testString = "a";
@@ -166,11 +166,11 @@ test( "yhenRivinSöörtsi", function() {
     var testRegex;
     var testString;
 
-    testRegex = PissixEx().laininStartti().sit( "a" ).breikki().sit( "b" ).rivinViga();
+    testRegex = PissixEx().laininStartti().sit( "a" ).breikki().sit( "b" ).laininEndi();
     testString = "a\nb";
     ok( testRegex.test( testString ), "b is on the second line" );
 
-    testRegex = PissixEx().laininStartti().sit( "a" ).breikki().sit( "b" ).rivinViga().yhenRivinSöörtsi();
+    testRegex = PissixEx().laininStartti().sit( "a" ).breikki().sit( "b" ).laininEndi().yhenRivinSöörtsi();
     testString = "a\nb";
     ok( testRegex.test( testString ), "b is on the second line but we are only searching the first" );
 } );
